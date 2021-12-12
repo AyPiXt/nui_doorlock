@@ -51,4 +51,4 @@ Allow item authorisation with `items = {'key_master', 'key_lspd'}` etc.
 Dependencies:
 you need to download qb-ui for the design
 
-[QB-UI](https://github.com/AyPiXt/qb-ui)
+## [QB-UI](https://github.com/AyPiXt/qb-ui)
