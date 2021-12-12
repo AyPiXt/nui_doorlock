@@ -36,8 +36,10 @@ I just Changed the design to Np Style Design:
 ![image](https://user-images.githubusercontent.com/76070305/145712237-c9e877f4-5ba7-42b8-944e-267441fc5e20.png)
 
 Distant:
+
 ![image](https://user-images.githubusercontent.com/76070305/145712403-9ce27674-b338-44eb-8102-6253bc97afcd.png)
  Near Door
+ 
  ![image](https://user-images.githubusercontent.com/76070305/145712428-b3265514-5455-457f-908f-97aa87d29a38.png)
 
 Dependencies:
