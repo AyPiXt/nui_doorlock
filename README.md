@@ -1,6 +1,5 @@
-# nui_doorlock
-
-A conversion of [nui_doorlock](https://github.com/thelindat/nui_doorlock) for [QBCore](https://github.com/qbcore-framework/qb-core). Thank you Linden for this amazing resource, unfortunately Linden has taken it off of their github so this repo now looks like it's a fork of another one but it was originally a fork of the original which was [Linden's](https://github.com/thelindat) repo
+# qb-nui_doorlock
+**A conversion of [nui_doorlock](https://github.com/thelindat/nui_doorlock) for [QBCore](https://github.com/qbcore-framework/qb-core). Thank you Linden for this amazing resource, unfortunately Linden has taken it off of their github so this repo now looks like it's a fork of another one but it was originally a fork of the original which was [Linden](https://github.com/thelindat) repo all credits are going to [Beriek](https://github.com/BerkieBb) who converted the script to qb-core** 
 
 <hr>
 <p align="center"><img src='https://i.imgur.com/GU9JDaV.png'></img></p>
@@ -33,10 +32,20 @@ Just choose which config file to use and delete the one you are not using.
 * Set door access permissions  
 Set multiple jobs to be authorised to use a door, with the minimum required grade `authorizedJobs = {['police']=0, ['offpolice']=0}`  
 Allow the door to be lockpicked with `lockpick = true`  
-Allow item authorisation with `items = {'key_master', 'key_lspd'}` etc.  
+Allow item authorisation with `items = {'key_master', 'key_lspd'}` etc. 
 
 <hr>
-<p align="center">https://youtu.be/OR9jxg5r_K0
-<img src="https://i.imgur.com/swapFgK.jpg"/></p>
+<p align="center">
+<img src="https://i.imgur.com/4EYdg03.png"/></p>
+<p align='center'><img src="https://i.imgur.com/lffUS9P.png"/></img></p>
 
-<p align='center'><img src="https://i.imgur.com/2Yz7Rtm.png"/></img></p>
+## Distant
+
+![image](https://user-images.githubusercontent.com/76070305/145712403-9ce27674-b338-44eb-8102-6253bc97afcd.png)
+ 
+ ## Near Door
+ 
+ ![image](https://user-images.githubusercontent.com/76070305/145712428-b3265514-5455-457f-908f-97aa87d29a38.png)
+
+## Dependencies
+* [QB-UI](https://github.com/AyPiXt/qb-ui)
