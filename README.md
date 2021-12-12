@@ -48,7 +48,5 @@ Allow item authorisation with `items = {'key_master', 'key_lspd'}` etc.
  
  ![image](https://user-images.githubusercontent.com/76070305/145712428-b3265514-5455-457f-908f-97aa87d29a38.png)
 
-Dependencies:
-you need to download qb-ui for the design
-
-## [QB-UI](https://github.com/AyPiXt/qb-ui)
+## Dependencies
+* [QB-UI](https://github.com/AyPiXt/qb-ui)
