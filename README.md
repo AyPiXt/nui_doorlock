@@ -38,7 +38,7 @@ Allow item authorisation with `items = {'key_master', 'key_lspd'}` etc.
 <hr>
 <p align="center">
 <img src="https://imgur.com/4EYdg03"/></p>
-<p align='center'><img src="https://imgur.com/lffUS9Pg"/></img></p>
+<p align='center'><img src="https://i.imgur.com/lffUS9P.png"/></img></p>
 
 ## Distant
 
