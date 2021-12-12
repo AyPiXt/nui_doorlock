@@ -3,7 +3,7 @@
 **A conversion of [nui_doorlock](https://github.com/thelindat/nui_doorlock) for [QBCore](https://github.com/qbcore-framework/qb-core). Thank you Linden for this amazing resource, unfortunately Linden has taken it off of their github so this repo now looks like it's a fork of another one but it was originally a fork of the original which was [Linden](https://github.com/thelindat) repo all credits are going to [Beriek](https://github.com/BerkieBb) who converted the script to qb-core** 
 
 <hr>
-<p align="center"><img src='https://imgur.com/lffUS9P'></img></p>
+<p align="center"><img src='https://i.imgur.com/GU9JDaV.png'></img></p>
 <hr>
 
 * Easily add and configure new doors! <a href='https://streamable.com/591vqz'>Example video</a>  
@@ -37,7 +37,7 @@ Allow item authorisation with `items = {'key_master', 'key_lspd'}` etc.
 
 <hr>
 <p align="center">
-<img src="https://imgur.com/4EYdg03"/></p>
+<img src="https://i.imgur.com/4EYdg03.png"/></p>
 <p align='center'><img src="https://i.imgur.com/lffUS9P.png"/></img></p>
 
 ## Distant
