@@ -24,8 +24,4 @@ files {
 	'html/sounds/*.ogg',
 }
 
-dependencies {
-    'qb-ui'
-}
-
 lua54 'yes'

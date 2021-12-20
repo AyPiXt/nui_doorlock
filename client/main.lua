@@ -148,12 +148,14 @@ end
 
 local displayNUIText = function(text)
     local selectedColor = closestDoor.data.locked and Config.LockedColor or Config.UnlockedColor
-    SendNUIMessage({type = "display", text = text, color = selectedColor})
+    --SendNUIMessage({type = "display", text = text, color = selectedColor})
+    exports['qb-ui']:showInteraction(text, selectedColor)
     Wait(1)
 end
 
 local hideNUI = function()
-    SendNUIMessage({type = "hide"})
+    --SendNUIMessage({type = "hide"})
+    exports['qb-ui']:hideInteraction()
     Wait(1)
 end
 
@@ -194,7 +196,7 @@ local DoorLoop = function()
                 playerPed = PlayerPedId()
                 if Config.Debug then print(json.encode(closestDoor)) end
                 if not paused and IsPauseMenuActive() then
-                    exports["qb-ui"]:hideInteraction((not hasAccess or newLockState) and 'error' or 'success')
+                    hideNUI()
                     paused = true
                 elseif paused then
                     if not IsPauseMenuActive() then paused = false end
@@ -204,16 +206,16 @@ local DoorLoop = function()
                     if closestDoor.distance < closestDoor.data.maxDistance then
                         local canOpen = CheckAuth(closestDoor.data)
                         if not closestDoor.data.locked and not canOpen then
-                            if Config.ShowUnlockedText then exports["qb-ui"]:showInteraction(("[E] Unlocked"):format('Unlocked'),'success') else exports["qb-ui"]:hideInteraction((not hasAccess or newLockState) and 'error' or 'success') end
+                            if Config.ShowUnlockedText then displayNUIText('Unlocked') else hideNUI() end
                         elseif not closestDoor.data.locked and canOpen then
-                            if Config.ShowUnlockedText then exports["qb-ui"]:showInteraction(("[E] Unlocked"):format('Unlocked'),'success') else exports["qb-ui"]:hideInteraction((not hasAccess or newLockState) and 'error' or 'success') end
+                            if Config.ShowUnlockedText then displayNUIText('[E] - Unlocked') else hideNUI() end
                         elseif closestDoor.data.locked and not canOpen then
-                            exports["qb-ui"]:showInteraction(("[E] Locked"):format('Locked'),'error')
+                            displayNUIText('Locked')
                         elseif closestDoor.data.locked and canOpen then
-                            exports["qb-ui"]:showInteraction(("[E] Locked"):format('Locked'),'error')
+                            displayNUIText('[E] - Locked')
                         end
                     else
-                        exports["qb-ui"]:hideInteraction()
+                        hideNUI()
                         break
                     end
                 end
