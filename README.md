@@ -49,3 +49,29 @@ Allow item authorisation with `items = {'key_master', 'key_lspd'}` etc.
 
 ## Dependencies
 * [QB-UI](https://github.com/AyPiXt/qb-ui)
+
+## Installation
+* just plug an play and dont forgett to rename the folder from qb-nui_doorlock to nui_doorlock
+
+## How to use for bankrobbery 
+* first of all you need to change some stuff in you config thats the config how it should be look for example here doorlock in pacific bank dont forgett to add the door id by your self. if you want it correctly working you need to change the table.insert for evrey door and add in evrey door the id manualy.
+* 'table.insert(Config.DoorList, { -- First thermite door 
+	fixText = false,
+	doorID = 5,
+	maxDistance = 2.0,
+	lockpick = false,
+	audioRemote = false,
+	locked = true,
+	objHeading = 340.00003051758,
+	objCoords = vector3(256.3116, 220.6579, 106.4296),
+	objHash = -222270721,
+	authorizedJobs = { ['police']=0 },
+	slides = false,
+	garage = false,			
+		-- oldMethod = true,
+		-- audioLock = {['file'] = 'metal-locker.ogg', ['volume'] = 0.6},
+		-- audioUnlock = {['file'] = 'metallic-creak.ogg', ['volume'] = 0.7},
+		-- autoLock = 1000
+})'
+
+the event how to trigger open a door automaticly when the hacking game of you shose is done and succes its this here  ```TriggerServerEvent('nui_doorlock:server:updateState',5, false, false, true, false)``` ass you can see its the same door id like on my config.
