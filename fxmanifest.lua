@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'BerkieB'
-description 'Conversion of https://github.com/thelindat/nui_doorlock for QBCore with additional changes for preference Redsigned by AyPi'
+description 'Conversion of https://github.com/thelindat/nui_doorlock for QBCore with additional changes for preference changed ui by AyPi'
 version '2.1.0'
 
 shared_scripts {
