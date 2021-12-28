@@ -146,20 +146,20 @@ local function CheckAuth(doorData)
     return false
 end
 
-local displayNUIText = function(text)
+local function displayNUIText(text)
     local selectedColor = closestDoor.data.locked and Config.LockedColor or Config.UnlockedColor
     --SendNUIMessage({type = "display", text = text, color = selectedColor})
     exports['qb-ui']:showInteraction(text, selectedColor)
     Wait(1)
 end
 
-local hideNUI = function()
+local function hideNUI()
     --SendNUIMessage({type = "hide"})
     exports['qb-ui']:hideInteraction()
     Wait(1)
 end
 
-local DoorLoop = function()
+local function DoorLoop()
     Started = true
     QBCore.Functions.TriggerCallback('nui_doorlock:server:getDoorList', function(doorList)
         Config.DoorList = doorList
@@ -380,7 +380,7 @@ RegisterNetEvent('nui_doorlock:client:setState', function(sid, doorID, locked, s
                 Config.DoorList[doorID].currentHeading = GetEntityHeading(Config.DoorList[doorID].object)
                 Config.DoorList[doorID].doorState = DoorSystemGetDoorState(Config.DoorList[doorID].doorHash)
                 if Config.DoorList[doorID].slides then
-                    DoorSystemSetAutomaticRate(v.doorHash, v.doorRate or 1.0, false, false)
+                    DoorSystemSetAutomaticRate(Config.DoorList[doorID].doorHash, Config.DoorList[doorID].doorRate or 1.0, false, false)
                     if Config.DoorList[doorID].locked then
                         DoorSystemSetDoorState(Config.DoorList[doorID].doorHash, 1, false, false) -- Set to locked
                         DoorSystemSetAutomaticDistance(Config.DoorList[doorID].doorHash, 0.0, false, false)
@@ -619,11 +619,8 @@ RegisterKeyMapping('doorlock', 'Interact with doorlock', 'keyboard', 'E')
 RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
 	if closestDoor.data and next(closestDoor.data) then
 		if not PlayerData.metadata["isdead"] and not PlayerData.metadata["ishandcuffed"] and closestDoor.data.lockpick and closestDoor.data.locked then
-			if isAdvanced then
-				TriggerEvent('qb-lockpick:client:openLockpick', AdvLockpickFinish)
-			else
-				TriggerEvent('qb-lockpick:client:openLockpick', LockpickFinish)
-			end
+			usingAdvanced = isAdvanced
+			TriggerEvent('qb-lockpick:client:openLockpick', LockpickFinish)
 		end
 	end
 end)
